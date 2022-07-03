@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+    
+    <LinearLayout
+        android:id="@+id/settingsMainLayout"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:padding="10dp"
+            android:id="@+id/settingsBackBtn"
+            android:layout_marginStart="@dimen/back_btn_margin"
+            android:layout_marginTop="@dimen/back_btn_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/back"/>
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoPerfilSettings"
+                android:padding="10dp"
+                android:layout_width="70sp"
+                android:layout_height="70sp"
+                android:src="@drawable/no_contact" />
+
+            <TextView
+                android:id="@+id/nameSettingsTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="70dp"
+                android:text="Teddy"
+                android:textSize="22sp"/>
+
+            <EditText
+                android:id="@+id/nameSettingsEditText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="70dp"
+                android:visibility="gone"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:text="Teddy"
+                android:textSize="22sp"/>
+
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/closeSessionBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Close Session"
+            android:layout_gravity="center"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".EditGroupActivity">
+
+    <ImageButton
+        android:id="@+id/backEditGroupBtn"
+        android:layout_marginTop="@dimen/back_btn_margin"
+        android:layout_marginStart="@dimen/back_btn_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/back"/>
+
+    <ScrollView
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/fotoEditGroup"
+                android:layout_marginTop="50dp"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/group"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/groupNameEditGroupTextView"
+                android:layout_marginTop="10dp"
+                style="@style/Theme.ChatApp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="22sp"
+                android:text="Mandriles"/>
+
+            <TextView
+                android:id="@+id/groupCreatorNameEditGroupTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Theme.ChatApp"
+                android:text="Created by Teddy"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/numMembersEditGroupTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/20"
+                android:layout_gravity="center"/>
+
+            <EditText
+                android:id="@+id/groupNameEditGroupEditText"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                android:textSize="22sp"/>
+
+            <CheckBox
+                android:id="@+id/privateSettingsCheckBox"
+                android:button="@null"
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                android:layout_marginTop="35dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Only group creator can edit group info"
+                android:textSize="17sp"/>
+
+            <CheckBox
+                android:id="@+id/onlyCreatorSendMessagesCheckBox"
+                android:button="@null"
+                android:drawableEnd="?android:attr/listChoiceIndicatorMultiple"
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Only group creator can send messages"
+                android:textSize="17sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/setMaxNumUsersTv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Theme.ChatApp"
+                    android:text="Max users (0 for no limit)"
+                    android:textSize="17sp"
+                    android:layout_weight="1"/>
+
+                <EditText
+                    android:id="@+id/maxNumUsersEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    android:text="0"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Users:"
+                style="@style/Theme.ChatApp"
+                android:textSize="17sp"/>
+
+            <ListView
+                android:id="@+id/usersInGroupListView"
+                android:nestedScrollingEnabled="true"
+                android:layout_width="match_parent"
+                android:layout_height="150dp" />
+
+            <LinearLayout
+                android:id="@+id/leaveTheGroupLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/browser_actions_divider_color"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/exit" />
+
+                <TextView
+                    style="@style/Theme.ChatApp"
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leave the group"
+                    android:textColor="@android:color/holo_red_light" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</LinearLayout>

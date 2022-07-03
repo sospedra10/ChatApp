@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ChatsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainChatsFragmentsLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageButton
+            android:id="@+id/settingsBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:src="@drawable/settings_image"
+            android:backgroundTint="@android:color/transparent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ListView
+            android:id="@+id/groupsListView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="70dp"
+            android:layout_marginBottom="110dp"
+            app:layout_constraintBottom_toTopOf="@+id/addGroupBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsBtn"
+            app:layout_constraintVertical_bias="0.381" />
+
+        <LinearLayout
+            android:id="@+id/createNewGroupLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:padding="35dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/newGroupNameEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:hint="Group name"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+
+            <Button
+                android:id="@+id/cancelNewGroupBtn"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="cancel" />
+
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/addGroupBtn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginBottom="50dp"
+            android:background="@drawable/circle_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/plusTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@+id/addGroupBtn"
+            app:layout_constraintEnd_toEndOf="@+id/addGroupBtn"
+            app:layout_constraintStart_toStartOf="@+id/addGroupBtn"
+            app:layout_constraintTop_toTopOf="@+id/addGroupBtn" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

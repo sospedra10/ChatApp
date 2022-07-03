@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        cardview:cardCornerRadius="10sp">
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/fotoGroupList"
+                        android:layout_width="50sp"
+                        android:layout_height="50sp"
+                        android:src="@drawable/group" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    tools:ignore="UselessParent">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:padding="2dp"
+                        android:orientation="vertical"
+                        tools:ignore="NestedWeights">
+
+                        <TextView
+                            style="@style/Theme.ChatApp"
+                            android:id="@+id/nombreGroupList"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:textSize="18sp"
+                            android:text="Mandriles"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            style="@style/Theme.ChatApp"
+                            android:id="@+id/groupCreatorName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Teddy"/>
+
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/Theme.ChatApp"
+                        android:id="@+id/membersInGroup"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="23/50"/>
+
+                    <ImageButton
+                        android:focusable="false"
+                        android:layout_marginStart="20dp"
+                        android:id="@+id/addOnGroupBtn"
+                        android:layout_gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/add"/>
+
+                </LinearLayout>
+            </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.gms.ads.AdView
+        android:visibility="gone"
+        android:id="@+id/bannerInListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="LARGE_BANNER"
+        app:adUnitId="@string/bannerTest" />
+</LinearLayout>

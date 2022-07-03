@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="max_users_in_group">50</integer>
+    <integer name="max_groups_per_user">20</integer>
+
+    <integer name="max_users_in_group_special">500</integer>
+    <integer name="max_groups_per_user_special">100</integer>
+
+    <integer name="positionsListViewBanner">2</integer>
+</resources>

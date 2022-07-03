@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".WelcomeActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/firstLine"
+            android:layout_width="20dp"
+            android:layout_height="60dp"
+            style="@style/MyCardView"
+            android:backgroundTint="@color/purple_200"
+            android:layout_centerHorizontal="true"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/secondLine"
+            android:layout_width="20dp"
+            android:layout_height="130dp"
+            style="@style/MyCardView"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@id/firstLine"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/thirdLine"
+            android:layout_width="20dp"
+            android:layout_height="220dp"
+            style="@style/MyCardView"
+            android:backgroundTint="@color/purple_200"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@id/secondLine"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/fourthLine"
+            android:layout_width="20dp"
+            android:layout_height="200dp"
+            style="@style/MyCardView"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@id/thirdLine"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/fifthLine"
+            android:layout_width="20dp"
+            android:layout_height="120dp"
+            style="@style/MyCardView"
+            android:backgroundTint="@color/teal_700"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@id/fourthLine"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/sixthLine"
+            android:layout_width="20dp"
+            android:layout_height="80dp"
+            style="@style/MyCardView"
+            android:backgroundTint="@color/purple_200"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@id/fifthLine"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="80dp"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_weight="1"
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/baloo"
+            android:text="@string/app_name"
+            android:textColor="@color/purple_200"
+            android:textSize="50sp" />
+
+        <TextView
+            android:layout_marginBottom="40dp"
+            android:id="@+id/textView2"
+            android:fontFamily="@font/bad_script"
+            style="@style/Theme.ChatApp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="By TeddyCode"
+            android:textSize="22sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
